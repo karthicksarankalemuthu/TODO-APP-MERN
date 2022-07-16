@@ -1,38 +1,239 @@
-.App {
-  text-align: center;
+ .list.complected{
+  background-color: #3AFE85;
+  text-decoration: line-through;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ .list.notcomplected{
+    background-color:rgb(248, 53, 53); 
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  background-color: #5372f0;
+}
+#container{
+  background-color: #fff;
+  width: 450px;
+  height: 500px;
+  box-shadow: 20px 20px 50px rgb(126, 124, 124);
+  overflow-y: scroll;
+}
+form {
+  display: inline-block;
+}
+input{
+  width: 250px;
+  height: 30px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: white;
+  border: 4px solid #5372f0 ;
+  margin: 30px;
+}
+button{
+  background-color:#3AFE85;
+  color: #fff;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+#add{
+  
+  color:black;
+  border: 4px solid #3AFE85;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+
+#deletebtn{
+  background-color:#5372f0;
+  color: #fff;
+  width: 70px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+#editbtn{
+  background-color:#5372f0;
+  color: #fff;
+  width: 70px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-left: 70px;
+  margin-right: 90px;
+}
+input::placeholder{
+  color: black;
+  font-weight: 800;
+
+}
+ ul li{
+  list-style: none;
+}
+
+.list{
+  width: 360px;
+  height: 70px;
+  background-color: #fff;
+  margin: 5px;
+  border-radius: 20px;
+  box-shadow: 2px 5px 20px rgb(173, 173, 173);
+}
+.list  li{
+  margin: 15px;
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  color: black;
+}
+
+.popup{
+  background-color: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup .popup-content{
+  width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border: 4px double black;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  box-shadow: 0 0 15px 4px rgb(0,0,0);
 }
 
-.App-link {
-  color: #61dafb;
+.popup .popup-content input[type=text]{
+  width: 300px;
+  padding: 20px;
+  height: 10px;
+  outline: none;
+  border: 4px solid blue;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.popup .popup-content button{
+  margin-top: 15px;
+  padding: 15px 50px;
+  cursor: pointer;
+  background-color: #3AFE85;
+  color: rgb(63, 59, 59);
+  border: none;
+  outline: none;
+  text-align: center;
+  align-items: center;
+  border-radius: 20px;
+}
+@media only screen and (max-width:600px){
+  #container{
+    background-color: #fff;
+    width: 230px;
+    height: 400px;
+    box-shadow: 20px 20px 50px rgb(126, 124, 124);
+    overflow-y: scroll;
   }
-  to {
-    transform: rotate(360deg);
+
+  input{
+    width: 130px;
+    height: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: white;
+    border: 4px solid #5372f0 ;
+    margin: 15px;
   }
+  #add{
+  
+    color:black;
+    border: 4px solid #3AFE85;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    font-size: 13px;
+  }
+  .list{
+    width: 200px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+   margin:2px;
+    box-shadow: 2px 5px 20px rgb(173, 173, 173);
+  }
+  .list  li{
+    margin: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+  }
+  
+#deletebtn{
+  background-color:#5372f0;
+  color: #fff;
+  width: 40px;
+  height: 15px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+#editbtn{
+  background-color:#5372f0;
+  color: #fff;
+  width: 40px;
+  height: 15px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-left: 40px;
+  margin-right: 60px;
+}
+.popup .popup-content{
+  width: 200px;
+  background-color: #fff;
+  padding: 10px;
+  border: 4px double black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px 4px rgb(0,0,0);
+}
+
+.popup .popup-content input[type=text]{
+  width: 150px;
+  padding: 20px;
+  height: 5px;
+  outline: none;
+  border: 4px solid blue;
+  border-radius: 20px;
+}
+
 }
